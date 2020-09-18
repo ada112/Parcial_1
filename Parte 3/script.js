@@ -30,7 +30,7 @@ class Dog{
         this.color = color;
     }
      printInfo() {
-        console.log("Nombre: " + this.name + " De color: " + this.color + ", raza: " + this.raza);    
+        console.log("Nombre: " + this.name + ", De color: " + this.color + ", raza: " + this.raza);    
     }
 
 }
