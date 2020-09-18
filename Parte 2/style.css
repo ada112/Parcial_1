@@ -1,38 +1,51 @@
+*{
+  box-sizing: border-box;
+}
 header {
-
+display: none;
 
 }
 
-
+ul{
+  
+}
 h2 {
 
 }
 
 .nav {
-
-
+  list-style-type: none;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  padding-inline-start: 0;
+  height: 100%;
+  
   }
 
-  li {
-
+  ul > li {
+    border: 1px solid black;
+    text-align: center;
+    padding: 0.2em 0.8em 0.2em 0.8em;
+    margin-bottom: 3em;
 
   }
 
   .content{
-
+    
 }
 
   .aside {
-
+    display: none;
   }
 
   .slidebox{
-
+    
    
   }
 
   .article{
-
+    display: none;
   }
 
 
@@ -44,21 +57,109 @@ h2 {
 /*Device = Tablets, Ipads (portrait)
   Screen = B/w 600px to 990px*/
   @media (min-width:600px) and (max-width: 990px)  {
+    .nav{
+      list-style-type: none;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    padding-inline-start: 0;
+    align-content: flex-end;
+
+    }
+
+    ul > li {
+      padding: 0.2em 2.5em 0.2em 2.5em;
+      margin-bottom: 3em;
+  
+    }
+    .content{
+      display: flex;
+      flex-flow: row nowrap;
+      border: 1px solid black;
+      
+    }
     .article {
-
+      display: flex;
+      border: 1px solid black;
+      flex-flow: column wrap; 
+      margin-left:0.6em ;
   } 
-header{
+  .content >.aside{
+    display: flex;
+    flex-flow: column wrap;
+    width: 40%;
+    border: 1px solid black;
+    padding: 0.2em 3.5em 0.2em 3.5em;
+    
+  }
+  .poem{
+    border: 1px solid black;
+  }
+  .slidebox{
+    border: 1px solid black;
+    
+    
+  }
+  header{
 
-}
+  }
 }
 
 /*  Small devices    */
-@media (max-width:599px) {
+@media (min-width: 991px) {
+  .nav{
+    list-style-type: none;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  padding-inline-start: 0;
+  align-content: flex-end;
 
-header,.content{
+  }
 
+  ul > li {
+    
+    padding: 0.2em 3.8em 0.2em 3.8em;
+    margin-bottom: 1em;
+
+  }
+  .content{
+    display: flex;
+    flex-flow: row nowrap;
+    
+  }
+  .article {
+    display: flex;
+    border: 1px solid black;
+    flex-flow: column wrap; 
+    margin-left:0.6em ;
+} 
+.aside{
+  display: flex;
+  flex-flow: column nowrap;
+  width: 40%;
+  border: 1px solid black;
+  padding: 0.2em 3.5em 0.2em 3.5em;
+}
+.poem{
+  border: 1px solid black;
+}
+.slidebox{
+  border: 1px solid black;
+  
 }
 
+header{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+}
+header > h2 {
+  border: 1px solid black;
+  width: 33.3%;
+  text-align: center;
+  margin: 0 0.2em 0.7em 0.2em ;
+}
 .nav {
 
 
